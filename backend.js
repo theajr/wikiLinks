@@ -17,6 +17,7 @@ function unregisteredLinks(text) {
   var lines = text
     .trim()
     .split(/\n/gi)
+    .map((k) => k.trim())
     .filter((k) => k);
   var toS = {};
 
