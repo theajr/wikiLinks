@@ -75,12 +75,19 @@ function mergeLinks(linksObject) {
 function getMatchingLinks(paragraph) {
   cache = cache || getLinks();
 
-  var words = paragraph.split(/\s/gi);
+  var replaced = paragraph.replaceAll(/[^a-zA-Z0-9]/gi, '').toUpperCase();
 
-  return words
-    .map((word) => word.toUpperCase())
-    .filter((word) => word in cache)
-    .map((word) => ({ word: word, link: cache[word] }))
+  return Object.entries(cache)
+    .filter(([word, link]) => {
+      if (
+        replaced.indexOf(
+          word.replaceAll(/[^a-zA-Z0-9]/gi, '').toUpperCase()
+        ) !== -1
+      ) {
+        return true;
+      }
+    })
+    .map(([word, link]) => ({ word: word, link: cache[word] }))
     .reduce(function (acc, i) {
       var re = Object.assign({}, acc);
       re[i.word] = i.link;
