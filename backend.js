@@ -158,6 +158,7 @@ var radios = Array.from(document.getElementsByName('mode')).forEach(function (
       saveLinksBtn.style.visibility = 'hidden';
     }
     textArea.value = '';
+    document.getElementById('link-list').innerHTML = '';
   });
 });
 
