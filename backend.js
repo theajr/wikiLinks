@@ -19,7 +19,8 @@ function unregisteredLinks(text) {
     .split(/\n/gi)
     .filter((k) => k);
   var toS = {};
-  for (var i = 0; i < lines.length - 1; i += 2) {
+
+  for (var i = 0; i < lines.length - 2; i += 3) {
     var up = lines[i].toUpperCase();
 
     if (!(up in cache)) {
