@@ -1,0 +1,10 @@
+{
+  "name": "wikiLinks",
+  "version": "1.0",
+  "manifest_version": 2,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {},
+  "chrome_url_overrides": { "newtab": "index.html" }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>wikiLinks</title>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Optional theme -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
+      integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ"
+      crossorigin="anonymous"
+    />
+    <!-- Latest compiled and minified JavaScript -->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="radio">
+            <label>
+              <input
+                type="radio"
+                name="mode"
+                id="searchMode"
+                value="search"
+                checked
+              />
+              Search Mode
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio" name="mode" id="updateMode" value="update" />
+              Update
+            </label>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="mb-8">
+            <button
+              type="button"
+              class="btn btn-success"
+              id="save-links-btn"
+              style="visibility: hidden"
+            >
+              Save Links
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <textarea
+            name="post-content"
+            id="post-content"
+            cols="30"
+            rows="10"
+            class="form-control"
+          ></textarea>
+        </div>
+
+        <div class="col-md-6">
+          <ul class="list-group" id="link-list">
+            <li class="list-group-item">
+              <div class="link-card">
+                <div class="left">
+                  <div class="word">Man</div>
+                  <div class="link">
+                    <a href="https://www.youtube.com/watch?v=9AYl10qxc0M"
+                      >https://www.youtube.com/watch?v=9AYl10qxc0M</a
+                    >
+                  </div>
+                </div>
+                <div>
+                  <button class="btn btn-primary btn-sm copy-btn">Copy</button>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="backend.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+  </body>
+</html>

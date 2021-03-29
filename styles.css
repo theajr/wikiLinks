@@ -1,0 +1,35 @@
+body {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 2vh;
+  height: 98vh;
+  background-color: aliceblue;
+}
+
+.link-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.list-group-item {
+  margin-bottom: 8px;
+}
+
+.row {
+  margin-top: 16px;
+}
+
+textarea {
+  height: 80vh !important;
+}
+
+#link-list {
+  max-height: 78vh;
+  overflow: auto;
+}
+
+.mb-8 {
+  margin-bottom: 16px;
+  height: 2vh;
+}
