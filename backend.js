@@ -150,7 +150,7 @@ var radios = Array.from(document.getElementsByName('mode')).forEach(function (
     } else {
       saveLinksBtn.style.visibility = 'hidden';
     }
-    doThatThing(textArea.value);
+    textArea.value = '';
   });
 });
 
